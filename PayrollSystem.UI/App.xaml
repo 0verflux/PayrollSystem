@@ -1,0 +1,19 @@
+﻿<Application x:Class="PayrollSystem.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Startup="OnStartup"
+             Exit="OnExit">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Thickness.xaml"/>
+                <ResourceDictionary Source="/Styles/FontSizes.xaml"/>
+                <ResourceDictionary Source="/Styles/ColorThemes.xaml"/>
+                <ResourceDictionary Source="/Styles/TextBlock.xaml"/>
+                <ResourceDictionary Source="/Styles/ResourceTemplates.xaml"/>
+                <ResourceDictionary Source="/Styles/Controls.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

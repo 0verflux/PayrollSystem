@@ -1,0 +1,103 @@
+﻿<Window x:Class="PayrollSystem.UI.Views.ShellWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prop="clr-namespace:PayrollSystem.UI.Properties"
+        xmlns:vm="clr-namespace:PayrollSystem.UI.ViewModels"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        mc:Ignorable="d"
+        Title="ShellWindow"
+        Height="720"
+        Width="1080"
+        MinHeight="720"
+        MinWidth="1080"
+        WindowStartupLocation="CenterScreen">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Unloaded">
+            <i:InvokeCommandAction Command="{Binding UnloadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+    <Window.Resources>
+        <x:Type x:Key="EmployeeVM" TypeName="vm:EmployeeViewModel"/>
+        <x:Type x:Key="PositionVM" TypeName="vm:PositionViewModel"/>
+        <x:Type x:Key="SalaryAdjustmentVM" TypeName="vm:SalaryAdjustmentViewModel"/>
+        <x:Type x:Key="PayrollEntrySelectVM" TypeName="vm:PayrollEntrySelectViewModel"/>
+        <x:Type x:Key="PayrollReportsVM" TypeName="vm:PayrollReportsViewModel"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel
+            Grid.Column="0"
+            Background="GhostWhite"
+            Orientation="Vertical"
+            KeyboardNavigation.IsTabStop="False">
+            <RadioButton
+                IsChecked="True"
+                Margin="{StaticResource M-V-TopMargin}"
+                Padding="{StaticResource M-Margin}"
+                Content="{x:Static prop:Resources.EmployeePageTitle}"
+                Style="{StaticResource {x:Type ToggleButton}}"
+                Command="{Binding NavigatePageCommand}"
+                CommandParameter="{StaticResource EmployeeVM}"
+                KeyboardNavigation.IsTabStop="False"/>
+
+            <RadioButton
+                Margin="{StaticResource M-V-MidMargin}"
+                Padding="{StaticResource M-Margin}"
+                Content="{x:Static prop:Resources.PositionPageTitle}"
+                Style="{StaticResource {x:Type ToggleButton}}"
+                Command="{Binding NavigatePageCommand}"
+                CommandParameter="{StaticResource PositionVM}"
+                KeyboardNavigation.IsTabStop="False"/>
+            
+            <RadioButton 
+                x:Name="SalaryAdjustmentButton"
+                Margin="{StaticResource M-V-BottomMargin}"
+                Padding="{StaticResource M-Margin}"
+                Content="{x:Static prop:Resources.SalaryAdjustmentPageTitle}"
+                Style="{StaticResource {x:Type ToggleButton}}"
+                Command="{Binding NavigatePageCommand}"
+                CommandParameter="{StaticResource SalaryAdjustmentVM}"
+                KeyboardNavigation.IsTabStop="False"/>
+
+            <Separator Margin="{StaticResource M-LeftRightMargin}"/>
+            
+            <RadioButton 
+                Margin="{StaticResource M-V-TopMargin}"
+                Padding="{StaticResource M-Margin}"
+                Content="{x:Static prop:Resources.CreatePayrollEntryPageTitle}"
+                Style="{StaticResource {x:Type ToggleButton}}"
+                Command="{Binding NavigatePageCommand}"
+                CommandParameter="{StaticResource PayrollEntrySelectVM}"
+                KeyboardNavigation.IsTabStop="False"/>
+            <RadioButton 
+                Margin="{StaticResource M-V-BottomMargin}"
+                Padding="{StaticResource M-Margin}"
+                Content="{x:Static prop:Resources.PayrollReportsPageTitle}"
+                Style="{StaticResource {x:Type ToggleButton}}"
+                Command="{Binding NavigatePageCommand}"
+                CommandParameter="{StaticResource PayrollReportsVM}"
+                KeyboardNavigation.IsTabStop="False"/>
+        </StackPanel>
+
+        <Frame
+            x:Name="shellFrame"
+            Grid.Column="1"
+            NavigationUIVisibility="Hidden"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            KeyboardNavigation.IsTabStop="False"
+            KeyboardNavigation.ControlTabNavigation="Contained"/>
+    </Grid>
+</Window>

@@ -1,0 +1,518 @@
+﻿<Page x:Class="PayrollSystem.UI.Views.PayrollEntryFillPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PayrollSystem.UI.Views"
+      xmlns:prop="clr-namespace:PayrollSystem.UI.Properties"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:b="clr-namespace:PayrollSystem.UI.Behaviors"
+      xmlns:ic="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:cvt="clr-namespace:PayrollSystem.UI.Converters"
+      mc:Ignorable="d" 
+      d:DesignHeight="600"
+      d:DesignWidth="800"
+      MinWidth="550"
+      Title="PayrollEntryFillPage">
+
+    <Page.Resources>
+        <cvt:DetailedSalaryAdjustmentInfoConverter x:Key="DetailedSalaryAdjusmentInfo"/>
+        <cvt:BooleanToHiddenVisibilityConverter x:Key="BooleanHidden"/>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="{x:Static prop:Resources.CreatePayrollEntryPageTitle}"
+            Style="{StaticResource LeftPageTitleStyle}"/>
+
+        <ScrollViewer 
+            Grid.Row="1"
+            VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <GroupBox
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Padding="{StaticResource S-Margin}"
+                    Header="Employee Information"
+                    Margin="{StaticResource M-V-TopMargin}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="170"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Employee Name"
+                            Padding="{StaticResource S-Margin}"
+                            HorizontalAlignment="Right"/>
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Text="Position"
+                            Padding="{StaticResource S-Margin}"
+                            HorizontalAlignment="Right"/>
+                        <TextBlock
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Text="{Binding EmployeeName, Mode=OneWay}"
+                            Padding="{StaticResource S-Margin}"
+                            Margin="{StaticResource L-LeftRightMargin}"
+                            FontWeight="SemiBold"/>
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Text="{Binding CurrentPosition, Mode=OneWay}"
+                            Padding="{StaticResource S-Margin}"
+                            Margin="{StaticResource L-LeftRightMargin}"
+                            HorizontalAlignment="Stretch"
+                            FontWeight="Bold"/>
+                        <Border
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="1"
+                            BorderThickness="1"
+                            BorderBrush="{x:Static SystemColors.ControlDarkBrush}"
+                            Margin="{StaticResource S-Margin}"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox
+                    Grid.Row="1"
+                    Padding="{StaticResource S-Margin}"
+                    Header="Edit Entry Information"
+                    Margin="{StaticResource M-V-MidMargin}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <DockPanel
+                            Grid.Row="0"
+                            Grid.Column="0">
+                            <TextBlock
+                                DockPanel.Dock="Top"
+                                Text="Pay Period Start Date"
+                                Style="{StaticResource HintTextBlockStyle}"
+                                Margin="{StaticResource M-LeftRightMargin}"/>
+                            <DatePicker
+                                DockPanel.Dock="Bottom"
+                                VerticalAlignment="Stretch"
+                                SelectedDate="{Binding PayPeriodStartDate, StringFormat=D, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="{StaticResource S-Margin}"
+                                Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}">
+                                <DatePicker.Resources>
+                                    <Style TargetType="DatePickerTextBox">
+                                        <Setter Property="IsReadOnly" Value="True"/>
+                                    </Style>
+                                </DatePicker.Resources>
+                            </DatePicker>
+                        </DockPanel>
+
+                        <DockPanel
+                            Grid.Row="0"
+                            Grid.Column="1">
+                            <TextBlock
+                                DockPanel.Dock="Top"
+                                Text="Pay Period End Date"
+                                Style="{StaticResource HintTextBlockStyle}"
+                                Margin="{StaticResource M-LeftRightMargin}"/>
+                            <DatePicker
+                                DockPanel.Dock="Bottom"
+                                VerticalAlignment="Stretch"
+                                SelectedDate="{Binding PayPeriodEndDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="{StaticResource S-Margin}"
+                                Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}">
+                                <DatePicker.Resources>
+                                    <Style TargetType="DatePickerTextBox">
+                                        <Setter Property="IsReadOnly" Value="True"/>
+                                    </Style>
+                                </DatePicker.Resources>
+                            </DatePicker>
+                        </DockPanel>
+
+                        <DockPanel
+                            Grid.Row="2"
+                            Grid.Column="0">
+                            <TextBlock
+                                DockPanel.Dock="Top"
+                                Text="Total work regular time (in hours)"
+                                Style="{StaticResource HintTextBlockStyle}"
+                                Margin="{StaticResource M-LeftMargin}"/>
+                            <TextBox
+                                DockPanel.Dock="Bottom"
+                                VerticalAlignment="Stretch"
+                                Margin="{StaticResource S-Margin}"
+                                Padding="{StaticResource S-Margin}"
+                                Text="{Binding HoursWorked, Mode=TwoWay, UpdateSourceTrigger=LostFocus, NotifyOnValidationError=True}"
+                                Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}"
+                                b:SelectAllFocusBehavior.Enable="True"
+                                MaxLength="10">
+                                <i:Interaction.Behaviors>
+                                    <b:TextBoxInputBehavior 
+                                        InputMode="DecimalInput"
+                                        JustPositivDecimalInput="True"/>
+                                </i:Interaction.Behaviors>
+                            </TextBox>
+                        </DockPanel>
+                        <DockPanel
+                            Grid.Row="2"
+                            Grid.Column="1">
+                            <TextBlock
+                                DockPanel.Dock="Top"
+                                Text="Total work overtime (in hours)"
+                                Style="{StaticResource HintTextBlockStyle}"
+                                Margin="{StaticResource M-LeftMargin}"/>
+                            <TextBox
+                                DockPanel.Dock="Bottom"
+                                VerticalAlignment="Stretch"
+                                Margin="{StaticResource S-Margin}"
+                                Padding="{StaticResource S-Margin}"
+                                Text="{Binding HoursOvertime, Mode=TwoWay, UpdateSourceTrigger=LostFocus, NotifyOnValidationError=True}"
+                                Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}"
+                                b:SelectAllFocusBehavior.Enable="True"
+                                MaxLength="10">
+                            </TextBox>
+                        </DockPanel>
+
+                        <Separator
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="{StaticResource S-Margin}"/>
+
+                        <DockPanel
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Right"
+                            Margin="{StaticResource S-Margin}">
+
+                            <DockPanel
+                                DockPanel.Dock="Right"
+                                Margin="{StaticResource M-LeftRightMargin}">
+                                <TextBlock
+                                    DockPanel.Dock="Top"
+                                    Text="Total Work Pay"
+                                    Style="{StaticResource HintTextBlockStyle}"/>
+                                <TextBlock
+                                    DockPanel.Dock="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    MinWidth="100"
+                                    Text="{Binding TotalWorkPay, Mode=OneWay, StringFormat=C2}"
+                                    Style="{StaticResource HeaderTextStyle}"/>
+                            </DockPanel>
+
+                            <DockPanel
+                                DockPanel.Dock="Right"
+                                Margin="{StaticResource S-LeftRightMargin}">
+                                <TextBlock
+                                    DockPanel.Dock="Top"
+                                    Text="Pay Rate (per hour)"
+                                    Style="{StaticResource HintTextBlockStyle}"/>
+                                <TextBlock
+                                    DockPanel.Dock="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    MinWidth="100"
+                                    Text="{Binding RatePerHour, Mode=OneWay, StringFormat=C}"
+                                    Style="{StaticResource HeaderTextStyle}"/>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                </GroupBox>
+                <GroupBox
+                    Grid.Row="2"
+                    Padding="{StaticResource S-Margin}"
+                    Header="Salary Adjustments"
+                    Margin="{StaticResource M-V-BottomMargin}">
+                    <DockPanel
+                        Margin="{StaticResource S-Margin}">
+                        <StackPanel
+                            DockPanel.Dock="Top"
+                            Orientation="Horizontal">
+                            <TextBlock 
+                                Text="Select Adjustment "
+                                VerticalAlignment="Center"
+                                Padding="{StaticResource S-H-LeftMargin}"/>
+                            <ComboBox
+                                ItemsSource="{Binding SalaryAdjustmentList, Mode=TwoWay}"
+                                SelectedItem="{Binding SelectedSalaryAdjustment, Mode=TwoWay}"
+                                Margin="{StaticResource S-H-RightMargin}"
+                                VerticalContentAlignment="Center"
+                                Width="250"
+                                MaxDropDownHeight="300">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock
+                                                Grid.Column="0"
+                                                Padding="{StaticResource S-H-LeftMargin}">
+                                                <TextBlock.Text>
+                                                    <MultiBinding Converter="{StaticResource DetailedSalaryAdjusmentInfo}">
+                                                        <Binding Path="Code"/>
+                                                        <Binding Path="Description"/>
+                                                    </MultiBinding>
+                                                </TextBlock.Text>
+                                            </TextBlock>
+                                        </Grid>
+
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <Button
+                                Margin="{StaticResource S-H-RightMargin}"
+                                Padding="{StaticResource S-Margin}"
+                                ToolTip="Add Adjustment"
+                                Command="{Binding InsertSalaryAdjustmentCommand}">
+                                <ic:PackIconMaterial
+                                    Kind="CashPlus"
+                                    Style="{StaticResource IconNormal}"/>
+                            </Button>
+                        </StackPanel>
+                        <Separator
+                            DockPanel.Dock="Top"
+                            Margin="{StaticResource S-Margin}"/>
+                        <ListBox
+                            DockPanel.Dock="Bottom"
+                            VerticalAlignment="Stretch"
+                            ItemsSource="{Binding SalaryAdjustmentDetailList}"
+                            SelectedItem="{Binding SelectedSalaryAdjustmentDetail}"
+                            Margin="{StaticResource M-Margin}"
+                            MaxHeight="300">
+                            <!--<i:Interaction.Triggers>
+                                <i:EventTrigger EventName="IsKeyboardFocusWithinChanged">
+                                    <i:InvokeCommandAction Command="{Binding UpdateReportsCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>-->
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                            <Setter Property="IsSelected" Value="True"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="{StaticResource M-V-MidMargin}">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock
+                                            Grid.Column="0"
+                                            Margin="{StaticResource M-LeftRightMargin}"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Stretch"
+                                            TextTrimming="CharacterEllipsis"
+                                            Text="{Binding DetailedInformation}"/>
+
+                                        <Border
+                                            Grid.Column="1"
+                                            BorderThickness="1"
+                                            BorderBrush="{x:Static SystemColors.ControlDarkBrush}"/>
+                                        <DockPanel
+                                            Grid.Column="2"
+                                            Margin="{StaticResource S-H-MidMargin}">
+                                            <TextBlock
+                                                DockPanel.Dock="Top"
+                                                Text="Percentage (%)"
+                                                Style="{StaticResource HintTextBlockStyle}"
+                                                Margin="{StaticResource M-LeftMargin}"/>
+                                            <TextBox
+                                                DockPanel.Dock="Bottom"
+                                                VerticalAlignment="Stretch"
+                                                Width="80"
+                                                Margin="{StaticResource S-Margin}"
+                                                Padding="{StaticResource S-Margin}"
+                                                HorizontalContentAlignment="Center"
+                                                Text="{Binding 
+                                                Path=Percentage,
+                                                Mode=TwoWay, 
+                                                UpdateSourceTrigger=LostFocus}"
+                                                Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}"
+                                                b:SelectAllFocusBehavior.Enable="True">
+                                                <i:Interaction.Behaviors>
+                                                    <b:TextBoxInputBehavior InputMode="DecimalInput"/>
+                                                </i:Interaction.Behaviors>
+                                            </TextBox>
+                                        </DockPanel>
+                                        <DockPanel
+                                            Grid.Column="3"
+                                            Margin="{StaticResource S-H-RightMargin}">
+                                            <TextBlock
+                                                DockPanel.Dock="Top"
+                                                Text="Fixed Value"
+                                                Style="{StaticResource HintTextBlockStyle}"
+                                                Margin="{StaticResource M-LeftMargin}"/>
+                                            <TextBox
+                                                DockPanel.Dock="Bottom"
+                                                VerticalAlignment="Stretch"
+                                                Width="80"
+                                                Margin="{StaticResource S-Margin}"
+                                                Padding="{StaticResource S-Margin}"
+                                                HorizontalContentAlignment="Center"
+                                                Text="{Binding 
+                                                Path=Value, 
+                                                Mode=TwoWay, 
+                                                UpdateSourceTrigger=LostFocus,
+                                                StringFormat=C2}"
+                                                Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}"
+                                                b:SelectAllFocusBehavior.Enable="True">
+                                                <i:Interaction.Behaviors>
+                                                    <b:TextBoxInputBehavior InputMode="DecimalInput"/>
+                                                </i:Interaction.Behaviors>
+                                            </TextBox>
+                                        </DockPanel>
+
+                                        <Button
+                                            Grid.Column="4"
+                                            Height="35"
+                                            Width="35"
+                                            Margin="{StaticResource S-H-RightMargin}"
+                                            Padding="{StaticResource S-Margin}"
+                                            ToolTip="Remove Adjustment"
+                                            Command="{Binding 
+                                            Path=DataContext.RemoveSalaryAdjustmentCommand,
+                                            RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                                            Visibility="{Binding
+                                            Path=IsSelected,
+                                            RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}},
+                                            Converter={StaticResource BooleanHidden}}">
+                                            <ic:PackIconMaterial
+                                                Kind="CashRemove"
+                                                Style="{StaticResource IconNormal}"/>
+                                        </Button>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </DockPanel>
+                </GroupBox>
+            </Grid>
+        </ScrollViewer>
+
+        <DockPanel
+            Grid.Row="2">
+            <Separator
+                DockPanel.Dock="Top"
+                Margin="{StaticResource L-LeftRightMargin}"/>
+            <GroupBox
+                    DockPanel.Dock="Left"
+                    Padding="{StaticResource S-Margin}"
+                    Header="Overall Report"
+                    Margin="{StaticResource M-V-BottomMargin}">
+                <UniformGrid Columns="3">
+                    <DockPanel
+                            DockPanel.Dock="Left"
+                            Margin="{StaticResource M-LeftRightMargin}">
+                        <TextBlock
+                                DockPanel.Dock="Top"
+                                Text="Gross Salary"
+                                Style="{StaticResource HintTextBlockStyle}"/>
+                        <TextBlock
+                                DockPanel.Dock="Bottom"
+                                HorizontalAlignment="Stretch"
+                                MinWidth="100"
+                                Text="{Binding TotalWorkPay, StringFormat=C2}"
+                                Style="{StaticResource HeaderTextStyle}"/>
+                    </DockPanel>
+                    <DockPanel
+                                DockPanel.Dock="Right"
+                                Margin="{StaticResource M-LeftRightMargin}">
+                        <TextBlock
+                                    DockPanel.Dock="Top"
+                                    Text="Total Adjustments"
+                                    Style="{StaticResource HintTextBlockStyle}"/>
+                        <TextBlock
+                                    DockPanel.Dock="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    MinWidth="100"
+                                    Text="{Binding TotalAdjustments, StringFormat=C2, UpdateSourceTrigger=PropertyChanged}"
+                                    Style="{StaticResource HeaderTextStyle}"/>
+                    </DockPanel>
+                    <DockPanel
+                                DockPanel.Dock="Right"
+                                Margin="{StaticResource M-LeftRightMargin}">
+                        <TextBlock
+                                    DockPanel.Dock="Top"
+                                    Text="Total Net Salary"
+                                    Style="{StaticResource HintTextBlockStyle}"/>
+                        <TextBlock
+                                    DockPanel.Dock="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    MinWidth="100"
+                                    Text="{Binding TotalNetPay, StringFormat=C2}"
+                                    Style="{StaticResource HeaderTextStyle}"/>
+                    </DockPanel>
+                </UniformGrid>
+            </GroupBox>
+            <StackPanel
+                DockPanel.Dock="Right"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                FlowDirection="RightToLeft"
+                Orientation="Horizontal">
+                <Button
+                    ToolTip="Add Payroll Entry"
+                    Margin="{StaticResource L-H-LeftMargin}"
+                    Padding="{StaticResource M-Margin}"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Command="{Binding AddPayrollEntryCommand}">
+                    <ic:PackIconMaterial
+                    Kind="PlusCircleOutline"
+                    Style="{StaticResource IconLarge}"/>
+                </Button>
+                <Button
+                    ToolTip="Go Back"
+                    Margin="{StaticResource L-H-RightMargin}"
+                    Padding="{StaticResource M-Margin}"
+                    Command="{Binding GoBackCommand}"
+                    Background="Transparent"
+                    BorderThickness="0">
+                    <ic:PackIconMaterial
+                    Kind="ChevronLeftCircleOutline"
+                    Style="{StaticResource IconLarge}"/>
+                </Button>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Page>

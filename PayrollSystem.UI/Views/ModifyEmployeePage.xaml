@@ -1,0 +1,212 @@
+﻿<Page x:Class="PayrollSystem.UI.Views.ModifyEmployeePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PayrollSystem.UI.Views"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      xmlns:b="clr-namespace:PayrollSystem.UI.Behaviors"
+      mc:Ignorable="d"
+      Height="400"
+      Width="400">
+
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="btv"/>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock
+            Grid.Row="0"
+            Text="{Binding PageTitle}"
+            Style="{StaticResource LeftPageTitleStyle}"/>
+
+        <Grid
+            Grid.Row="1"
+            Margin="{StaticResource M-Margin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <DockPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Name"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftRightMargin}"/>
+                <TextBox
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    Text="{Binding EmployeeName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                    Margin="{StaticResource S-Margin}"
+                    Padding="{StaticResource S-Margin}"
+                    Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}"
+                    b:SelectAllFocusBehavior.Enable="True"/>
+            </DockPanel>
+            <DockPanel
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Address"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftRightMargin}"/>
+                <TextBox
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    Text="{Binding EmployeeAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                    Margin="{StaticResource S-Margin}"
+                    Padding="{StaticResource S-Margin}"
+                    Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}"
+                    b:SelectAllFocusBehavior.Enable="True"/>
+            </DockPanel>
+            <DockPanel
+                Grid.Row="4"
+                Grid.Column="0">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Gender"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftRightMargin}"/>
+                <ComboBox
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    SelectedValue="{Binding EmployeeGender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                    Margin="{StaticResource S-Margin}"
+                    VerticalContentAlignment="Center"
+                    SelectedValuePath="Tag">
+                    <ComboBoxItem Content="Male" Tag="M" IsSelected="True"/>
+                    <ComboBoxItem Content="Female" Tag="F"/>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel
+                Grid.Row="4"
+                Grid.Column="1">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Birth Date"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftRightMargin}"/>
+                <DatePicker
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    SelectedDate="{Binding EmployeeBirthDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                    Margin="{StaticResource S-Margin}"
+                    DisplayDateEnd="{x:Static sys:DateTime.Now}"
+                    Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}">
+                    <DatePicker.Resources>
+                        <Style TargetType="DatePickerTextBox">
+                            <Setter Property="IsReadOnly" Value="True"/>
+                        </Style>
+                    </DatePicker.Resources>
+                </DatePicker>
+            </DockPanel>
+            <DockPanel
+                Grid.Row="6"
+                Grid.Column="0">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Position"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftRightMargin}"/>
+                <ComboBox
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    SelectedValue="{Binding PositionID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                    ItemsSource="{Binding PositionList}"
+                    Margin="{StaticResource S-Margin}"
+                    DisplayMemberPath="Name"
+                    SelectedValuePath="ID"
+                    Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}"
+                    MaxDropDownHeight="300"/>
+            </DockPanel>
+            <CheckBox
+                Grid.Row="6"
+                Grid.Column="1"
+                Content="Is Employment End?"
+                Margin="{StaticResource M-Margin}"
+                VerticalAlignment="Center"
+                IsChecked="{Binding IsEmploymentLeave, Mode=TwoWay}"
+                Visibility="{Binding ModifyState, Converter={StaticResource btv}}"/>
+            <DockPanel
+                Grid.Row="8"
+                Grid.Column="0">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Employment Start Date"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftRightMargin}"/>
+                <DatePicker
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    SelectedDate="{Binding EmploymentStartDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Margin="{StaticResource S-Margin}"
+                    Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}">
+                    <DatePicker.Resources>
+                        <Style TargetType="DatePickerTextBox">
+                            <Setter Property="IsReadOnly" Value="True"/>
+                        </Style>
+                    </DatePicker.Resources>
+                </DatePicker>
+            </DockPanel>
+            <DockPanel
+                Grid.Row="8"
+                Grid.Column="1"
+                Visibility="{Binding IsEmploymentLeave, Converter={StaticResource btv}}">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Employment End Date"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftRightMargin}"/>
+                <DatePicker
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    SelectedDate="{Binding EmploymentEndDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    DisplayDateStart="{x:Static sys:DateTime.Now}"
+                    Margin="{StaticResource S-Margin}">
+                    <DatePicker.Resources>
+                        <Style TargetType="DatePickerTextBox">
+                            <Setter Property="IsReadOnly" Value="True"/>
+                        </Style>
+                    </DatePicker.Resources>
+                </DatePicker>
+            </DockPanel>
+
+            <Button
+                Grid.Row="10"
+                Grid.Column="0"
+                Content="Save"
+                Margin="{StaticResource M-H-LeftMargin}"
+                Padding="{StaticResource S-Margin}"
+                Command="{Binding SaveCommand}"/>
+            <Button
+                Grid.Row="10"
+                Grid.Column="1"
+                Content="Cancel"
+                Margin="{StaticResource M-H-RightMargin}"
+                Padding="{StaticResource S-Margin}"
+                Command="{Binding CloseCommand}"/>
+        </Grid>
+    </Grid>
+</Page>

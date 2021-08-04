@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PayrollSystem.UI.Helpers.AlertBox">
+    <Position X="20" Y="2.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\AlertBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Helpers.FrameExtensions">
+    <Position X="16.5" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Helpers\FrameExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Helpers.GuardExtensions">
+    <Position X="16.5" Y="1.5" Width="7.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\GuardExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Helpers.WindowExtensions">
+    <Position X="16.5" Y="4.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Helpers\WindowExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.Entities.SalaryAdjustmentDetailViewModel" BaseTypeListCollapsed="true">
+    <Position X="36.75" Y="27.25" Width="6.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAQAAABAAAABAgAAgAQAAAgAAAAAAE=</HashCode>
+      <FileName>ViewModels\Entities\SalaryAdjustmentDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.EmployeeViewModel" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="17.5" Width="8.25" />
+    <TypeIdentifier>
+      <HashCode>AAABkAQIABASCAgAoGIEAkQAAAAhAIRAAIDAAAECAIA=</HashCode>
+      <FileName>ViewModels\EmployeeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.ModifyEmployeeViewModel" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="17.5" Width="8.75" />
+    <TypeIdentifier>
+      <HashCode>AkCLEAAAADECAAAEIAAIAEQAAQAAAAcAgAAAAACGAAA=</HashCode>
+      <FileName>ViewModels\ModifyEmployeeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.ModifyPositionViewModel" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="25.75" Width="8.25" />
+    <TypeIdentifier>
+      <HashCode>AEDQAAAAABEAAAAAIAAAKEQAAQAAAAcAAAAAICAEAAA=</HashCode>
+      <FileName>ViewModels\ModifyPositionViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.ModifySalaryAdjustmentViewModel" BaseTypeListCollapsed="true">
+    <Position X="20" Y="25" Width="9.75" />
+    <TypeIdentifier>
+      <HashCode>AEjQAAAAAAEAAQAAIAAAAERAAQAAIAcAAAAAAAAEAAA=</HashCode>
+      <FileName>ViewModels\ModifySalaryAdjustmentViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.PayrollEntryFillViewModel" BaseTypeListCollapsed="true">
+    <Position X="39" Y="17.5" Width="10.25" />
+    <TypeIdentifier>
+      <HashCode>AAwIgQLAEAAKQCgAIAAggAQJAEABIgUAAMAgACABBIU=</HashCode>
+      <FileName>ViewModels\PayrollEntryFillViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.PayrollEntrySelectViewModel" BaseTypeListCollapsed="true">
+    <Position X="13" Y="24.5" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAQAAABAQAAAAIAAAAAwAAAAAAIQAAACAAAACAAA=</HashCode>
+      <FileName>ViewModels\PayrollEntrySelectViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.PayrollReportsViewModel" BaseTypeListCollapsed="true">
+    <Position X="21" Y="17.5" Width="8.25" />
+    <TypeIdentifier>
+      <HashCode>AAABkQAIABEACCABgCIgAgQAAAAhAoRAAICAAAACAIE=</HashCode>
+      <FileName>ViewModels\PayrollReportsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.PositionViewModel" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="25" Width="6" />
+    <TypeIdentifier>
+      <HashCode>IAARhAQAEBAAAAIAIGAAAAQAAAAhACTAQAAAAAECAIA=</HashCode>
+      <FileName>ViewModels\PositionViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.SalaryAdjustmentViewModel" BaseTypeListCollapsed="true">
+    <Position X="13" Y="17.5" Width="7.5" />
+    <TypeIdentifier>
+      <HashCode>AABIwAYAAAACAAAAIGAQAAQAAAEhIARAAIAhAAEAAIA=</HashCode>
+      <FileName>ViewModels\SalaryAdjustmentViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.ViewModels.ShellViewModel">
+    <Position X="73.5" Y="13.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAYACAAAIAAQAAABAAAAEAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ShellViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Converters.BooleanToHiddenVisibilityConverter" BaseTypeListCollapsed="true">
+    <Position X="43.75" Y="5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\BooleanToHiddenVisibilityConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Converters.CountToVisibilityConverter" BaseTypeListCollapsed="true">
+    <Position X="43.75" Y="3.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\CountToVisibilityConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Converters.NullToVisibilityConverter" BaseTypeListCollapsed="true">
+    <Position X="43.75" Y="1.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\NullToVisibilityConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Converters.PrintDateRangeConverter" BaseTypeListCollapsed="true">
+    <Position X="43.75" Y="6.75" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\PrintDateRangeConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.EmployeePage" BaseTypeListCollapsed="true">
+    <Position X="52.25" Y="2" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\EmployeePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.ModifyEmployeePage" BaseTypeListCollapsed="true">
+    <Position X="56.5" Y="6.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ModifyEmployeePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.ModifyPositionPage" BaseTypeListCollapsed="true">
+    <Position X="52.25" Y="3.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ModifyPositionPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.ModifySalaryAdjustmentPage" BaseTypeListCollapsed="true">
+    <Position X="52.25" Y="5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ModifySalaryAdjustmentPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.PayrollEntryFillPage" BaseTypeListCollapsed="true">
+    <Position X="56.75" Y="2" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\PayrollEntryFillPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.PayrollEntrySelectPage" BaseTypeListCollapsed="true">
+    <Position X="52.25" Y="8" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\PayrollEntrySelectPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.PayrollReportsPage" BaseTypeListCollapsed="true">
+    <Position X="52.25" Y="6.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\PayrollReportsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.PositionPage" BaseTypeListCollapsed="true">
+    <Position X="55" Y="9.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\PositionPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.SalaryAdjustmentPage" BaseTypeListCollapsed="true">
+    <Position X="56.5" Y="3.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\SalaryAdjustmentPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Views.ShellWindow" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="13.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAA=</HashCode>
+      <FileName>Views\ShellWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Validations.LessThanDate">
+    <Position X="38.25" Y="6.75" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\LessThanDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Validations.NaturalNumber">
+    <Position X="38.25" Y="1.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\NaturalNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Validations.UniquePositionName">
+    <Position X="38.25" Y="5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\UniquePositionName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Validations.UniqueSalaryAdustmentCode">
+    <Position X="38.25" Y="3.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\UniqueSalaryAdustmentCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Messages.SelectedEmployeeChangedMessage">
+    <Position X="56.75" Y="8" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Messages\SelectedEmployeeChangedMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Messages.TotalWorkPayChangedMessage">
+    <Position X="57.5" Y="5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Messages\TotalWorkPayChangedMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.UI.Services.ApplicationHostService" BaseTypeListCollapsed="true">
+    <Position X="24" Y="3.25" Width="9" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQAAAAAAAAIBgAAAAAAAABAAAAAwAAAAIAgAA=</HashCode>
+      <FileName>Services\ApplicationHostService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Services.NavigationService" BaseTypeListCollapsed="true">
+    <Position X="24" Y="7" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAIAQAAAACAAAIAAAAAAAEAAAIQAQABCAA=</HashCode>
+      <FileName>Services\NavigationService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.Services.PageService" BaseTypeListCollapsed="true">
+    <Position X="30" Y="7" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAABAAAAAAAARAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\PageService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.UI.App">
+    <Position X="72.25" Y="17.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgACAAAAEA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PayrollSystem.UI.Contracts.Activation.IActivationHandler">
+    <Position X="30" Y="12.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Activation\IActivationHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PayrollSystem.UI.Contracts.Services.INavigationService">
+    <Position X="24" Y="11.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAQAAAACAAAAAAAAAAAEAAAIQAAABAAA=</HashCode>
+      <FileName>Contracts\Services\INavigationService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PayrollSystem.UI.Contracts.Services.IPageService">
+    <Position X="30" Y="9.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Services\IPageService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PayrollSystem.UI.Contracts.ViewModels.INavigationAware">
+    <Position X="30" Y="11" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ViewModels\INavigationAware.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PayrollSystem.UI.Contracts.Views.IShellWindow">
+    <Position X="71" Y="15.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAA=</HashCode>
+      <FileName>Contracts\Views\IShellWindow.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PayrollSystem.UI.Contracts.Views.IValidationParameter">
+    <Position X="41.25" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Views\IValidationParameter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PayrollSystem.UI.Common.ModifyState">
+    <Position X="70.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Common\ModifyState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

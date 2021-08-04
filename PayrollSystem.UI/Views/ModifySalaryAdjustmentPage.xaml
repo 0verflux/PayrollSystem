@@ -1,0 +1,92 @@
+﻿<Page x:Class="PayrollSystem.UI.Views.ModifySalaryAdjustmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PayrollSystem.UI.Views"
+      xmlns:b="clr-namespace:PayrollSystem.UI.Behaviors"
+      mc:Ignorable="d" 
+      Height="400"
+      Width="400">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Text="{Binding PageTitle}"
+            Style="{StaticResource LeftPageTitleStyle}"/>
+
+        <Grid
+            Grid.Row="1"
+            Margin="{StaticResource M-Margin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <DockPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Salary Adjustment Code"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftMargin}"/>
+                <TextBox
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    Margin="{StaticResource S-Margin}"
+                    Padding="{StaticResource S-Margin}"
+                    Text="{Binding SalaryAdjustmentCode, Mode=TwoWay, UpdateSourceTrigger=LostFocus, NotifyOnValidationError=True}"
+                    Validation.ErrorTemplate="{StaticResource CustomErrorTemplateStyle}"
+                    b:SelectAllFocusBehavior.Enable="True"/>
+            </DockPanel>
+
+            <DockPanel
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    Text="Salady Adjustment Description (optional)"
+                    Style="{StaticResource HintTextBlockStyle}"
+                    Margin="{StaticResource M-LeftMargin}"/>
+                <TextBox
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Stretch"
+                    Margin="{StaticResource S-Margin}"
+                    Padding="{StaticResource S-Margin}"
+                    Text="{Binding SalaryAdjustmentDescription, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    b:SelectAllFocusBehavior.Enable="True"/>
+            </DockPanel>
+            
+
+            <Button
+                Grid.Row="6"
+                Grid.Column="0"
+                Content="Save"
+                Margin="{StaticResource M-H-LeftMargin}"
+                Padding="{StaticResource S-Margin}"
+                Command="{Binding SaveCommand}"/>
+            <Button
+                Grid.Row="6"
+                Grid.Column="1"
+                Content="Cancel"
+                Margin="{StaticResource M-H-RightMargin}"
+                Padding="{StaticResource S-Margin}"
+                Command="{Binding CloseCommand}"/>
+        </Grid>
+    </Grid>
+</Page>

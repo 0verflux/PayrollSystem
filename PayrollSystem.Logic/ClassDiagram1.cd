@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PayrollSystem.Logic.Contexts.PayrollDBContext">
+    <Position X="51" Y="3.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAACRAQAAAgAAAAAAAAGAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Contexts\PayrollDBContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.Base.AndSpecification&lt;T&gt;">
+    <Position X="19" Y="10.75" Width="6" />
+    <InheritanceLine Type="PayrollSystem.Logic.Specifications.Base.Specification&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.188" Y="12.5" />
+        <Point X="25.188" Y="11.375" />
+        <Point X="25" Y="11.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\Base\AndSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.Base.OrSpecification&lt;T&gt;">
+    <Position X="19" Y="9" Width="6" />
+    <InheritanceLine Type="PayrollSystem.Logic.Specifications.Base.Specification&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.188" Y="12.5" />
+        <Point X="25.188" Y="10.062" />
+        <Point X="25" Y="10.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\Base\OrSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.Base.Specification&lt;T&gt;">
+    <Position X="19" Y="12.5" Width="6.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAgAAAAAAAAAAAAAAAAAAAAAAhgIAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\Base\Specification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.EmployeeActiveSpec">
+    <Position X="19.5" Y="20" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\EmployeeActiveSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.EmployeeIDSpec">
+    <Position X="20" Y="21.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\EmployeeIDSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.EmployeeNameSpec">
+    <Position X="22.75" Y="18.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\EmployeeNameSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.EmployeePositionIDSpec">
+    <Position X="19.5" Y="18.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\EmployeePositionIDSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.PositionExistSpec">
+    <Position X="22.75" Y="17" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\PositionExistSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.PositionIDSpec">
+    <Position X="22.75" Y="21.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\PositionIDSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.PositionNameSpec">
+    <Position X="22.75" Y="20" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\PositionNameSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.SalaryAdjustmentCodeSpec">
+    <Position X="22.75" Y="15.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\SalaryAdjustmentCodeSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.SalaryAdjustmentExistSpec">
+    <Position X="18.75" Y="15.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\SalaryAdjustmentExistSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Specifications.SalaryAdjustmentIDSpec">
+    <Position X="19.5" Y="17" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Specifications\SalaryAdjustmentIDSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.Employees.DTOs.EmployeeDTO">
+    <Position X="64.5" Y="2" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACACgACgAAAAAAQAAAAAAAACgAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Employees\DTOs\EmployeeDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.Employees.DTOs.EmployeeMiniDTO">
+    <Position X="64.5" Y="9.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAgAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Employees\DTOs\EmployeeMiniDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.Employees.Employee">
+    <Position X="42.25" Y="35.25" Width="7.25" />
+    <InheritanceLine Type="PayrollSystem.Logic.Common.Entity" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="58.5" Y="36.938" />
+        <Point X="58.26" Y="36.938" />
+        <Point X="58.26" Y="38.581" />
+        <Point X="49.74" Y="38.581" />
+        <Point X="49.74" Y="38.933" />
+        <Point X="48.875" Y="38.933" />
+        <Point X="48.875" Y="38.858" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAAAAEgQAAAACAAAAAAAgAAAAAABAAAAAA=</HashCode>
+      <FileName>Domain\Employees\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.Employees.EmployeeManager" BaseTypeListCollapsed="true">
+    <Position X="80" Y="15.25" Width="10.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAIJgACAAAAgAEAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>Domain\Employees\EmployeeManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.Employees.PersonalInformation">
+    <Position X="20.5" Y="34.75" Width="6.25" />
+    <InheritanceLine Type="PayrollSystem.Logic.Common.Value&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="23.75" Y="34.123" />
+        <Point X="23.75" Y="34.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAICAIAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Employees\PersonalInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.PayrollEntries.DTOs.CreatePayrollEntryDTO">
+    <Position X="59.5" Y="2" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAIIAAAAABAAgAAAAAAIgAAAAAABAIAAAABACCAAAAA=</HashCode>
+      <FileName>Domain\PayrollEntries\DTOs\CreatePayrollEntryDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.PayrollEntries.DTOs.PayrollEntryDetailsDTO">
+    <Position X="59.5" Y="5.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAgAAgAAAIgAAAAAABAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\PayrollEntries\DTOs\PayrollEntryDetailsDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.PayrollEntries.PayrollEntry">
+    <Position X="41.5" Y="39" Width="8" />
+    <InheritanceLine Type="PayrollSystem.Logic.Common.Entity" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="58.5" Y="36.938" />
+        <Point X="58.26" Y="36.938" />
+        <Point X="58.26" Y="38.351" />
+        <Point X="49.74" Y="38.351" />
+        <Point X="49.74" Y="39.098" />
+        <Point X="48.875" Y="39.098" />
+        <Point X="48.875" Y="39" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAgAAACBABAgABCAAAAAAAAAA=</HashCode>
+      <FileName>Domain\PayrollEntries\PayrollEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.PayrollEntries.PayrollManager" BaseTypeListCollapsed="true">
+    <Position X="72" Y="15.25" Width="7.75" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAEAAQIAAAgABAgAAAAAAAAAQAAACAAAAAAAAA=</HashCode>
+      <FileName>Domain\PayrollEntries\PayrollManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.Positions.DTOs.PositionDTO">
+    <Position X="61.75" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Domain\Positions\DTOs\PositionDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.Positions.DTOs.PositionMiniDTO">
+    <Position X="64.5" Y="5.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQACAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Domain\Positions\DTOs\PositionMiniDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.Positions.Position">
+    <Position X="58.5" Y="38.75" Width="4" />
+    <InheritanceLine Type="PayrollSystem.Logic.Common.Entity" ManuallyRouted="true">
+      <Path>
+        <Point X="60" Y="38.074" />
+        <Point X="60" Y="38.478" />
+        <Point X="60.5" Y="38.478" />
+        <Point X="60.5" Y="38.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CAAAACAAAAAAAAAAAAAAAAQACAAAAAAAAAAAQCAAAAA=</HashCode>
+      <FileName>Domain\Positions\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Application.PositionManager" BaseTypeListCollapsed="true">
+    <Position X="59" Y="15.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAIgiQAAAAggAAAAAAgAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Domain\Positions\PositionManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.SalaryAdjustmentDetails.DTOs.SalaryAdjustmentDetailDTO">
+    <Position X="64.5" Y="7.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAgAAAAAAAAAAAAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Domain\SalaryAdjustmentDetails\DTOs\SalaryAdjustmentDetailDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.SalaryAdjustmentDetails.DTOs.SalaryAdjustmentDTO">
+    <Position X="59.25" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\SalaryAdjustments\DTOs\SalaryAdjustmentDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.SalaryAdjustmentDetails.Percentage">
+    <Position X="28" Y="31.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAACAAAAAgAAAAAAA=</HashCode>
+      <FileName>Domain\SalaryAdjustmentDetails\Percentage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.SalaryAdjustmentDetails.SalaryAdjustmentDetail">
+    <Position X="51" Y="38.75" Width="7" />
+    <InheritanceLine Type="PayrollSystem.Logic.Common.Entity" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="60" Y="38.074" />
+        <Point X="60" Y="38.466" />
+        <Point X="58.26" Y="38.466" />
+        <Point X="58.26" Y="40.438" />
+        <Point X="58" Y="40.438" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAIAAI=</HashCode>
+      <FileName>Domain\SalaryAdjustmentDetails\SalaryAdjustmentDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.SalaryAdjustments.SalaryAdjustment">
+    <Position X="52.5" Y="35.5" Width="5.5" />
+    <InheritanceLine Type="PayrollSystem.Logic.Common.Entity" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="58.5" Y="36.938" />
+        <Point X="58" Y="36.938" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAgAAAAAAAiAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Domain\SalaryAdjustments\SalaryAdjustment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.SalaryAdjustments.SalaryAdjustmentManager" BaseTypeListCollapsed="true">
+    <Position X="65.25" Y="15.25" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAgAAAEAkAAAAAAAAAAAQAAAAQAEAAAA=</HashCode>
+      <FileName>Domain\SalaryAdjustments\SalaryAdjustmentManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.Logic.Domain.EntityFactory">
+    <Position X="51" Y="7" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAEAABIAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\EntityFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Extensions.GuardExtensions">
+    <Position X="66" Y="12.5" Width="9.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\GuardExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Exceptions.EntityAlreadyExistsException">
+    <Position X="72" Y="11" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\EntityAlreadyExistsException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Exceptions.EntityNotFoundException">
+    <Position X="70.5" Y="9.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\EntityNotFoundException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Mappers.AutoMapperProfile">
+    <Position X="55.75" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mappers\AutoMapperProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Common.DateRange">
+    <Position X="27.25" Y="34.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACABAAAAIAAAAAAQAAAAAAACQAAAgAAAAAA=</HashCode>
+      <FileName>Common\DateRange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Common.Entity">
+    <Position X="58.5" Y="35.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Common\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Common.Value&lt;T&gt;">
+    <Position X="22" Y="32.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAoAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Common\Value.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.DependencyInjection">
+    <Position X="66" Y="11.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DependencyInjection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayrollSystem.Logic.Contexts.Configurations.EmployeeEntityTypeConfiguration" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="3.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contexts\Configurations\EmployeeEntityTypeConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.Logic.Contexts.Configurations.PayrollEntryEntityTypeConfiguration" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="5.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contexts\Configurations\PayrollEntryEntityTypeConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.Logic.Contexts.Configurations.PositionEntityTypeConfiguration" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="2.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contexts\Configurations\PositionEntityTypeConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.Logic.Contexts.Configurations.SalaryAdjustmentDetailEntityTypeConfiguration" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="8.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contexts\Configurations\SalaryAdjustmentDetailEntityTypeConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PayrollSystem.Logic.Contexts.Configurations.SalaryAdjustmentEntityTypeConfiguration" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="6.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contexts\Configurations\SalaryAdjustmentEntityTypeConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="PayrollSystem.Logic.Contracts.IEmployeeManager">
+    <Position X="80" Y="18.75" Width="10.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAIAgACAAAAAAEAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IEmployeeManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PayrollSystem.Logic.Contracts.IPayrollManager">
+    <Position X="72" Y="18.75" Width="7.75" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IPayrollManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PayrollSystem.Logic.Contracts.IPositionManager">
+    <Position X="59" Y="18.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgiQAAAAAgAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IPositionManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PayrollSystem.Logic.Contracts.ISalaryAdjustmentManager">
+    <Position X="65.25" Y="18.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAEAEAAAAAAAAAAAQAAAAQAEAAAA=</HashCode>
+      <FileName>Contracts\ISalaryAdjustmentManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
